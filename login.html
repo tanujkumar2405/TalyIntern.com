@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalyIntern - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body >
+    <header class="header">
+        <div class="container header-content">
+            <div class="header-left">
+                <a href="#" class="logo" aria-label="TalyIntern Home">
+                    <img src="/TalyIntern.com/logo.png" alt="TalyIntern Logo">
+                </a>
+            </div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="searh engine/index.html" class="nav-link">Internship</a></li>
+                    <li><a href="#" class="nav-link">AI Match</a></li>
+                    <li><a href="searh engine/index.html" class="nav-link">Jobs</a></li>
+                    <li><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+            
+                <a href="#" class="user-icon" aria-label="User Profile">
+                    <img src="/TalyIntern.com/login.png" alt="User Profile Icon" height="24" width="24">
+                </a>
+
+                <button class="hamburger" aria-label="Open navigation" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="welcome-section">
+            <div class="container welcome-content">
+                <span class="verified-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Verified opportunities
+                </span>
+                <h1>Welcome back to TalyIntern</h1>
+                <p>Create an account to connect with top employers and land your dream internship.</p>
+                <div class="placeholder-buttons">
+                    <div class="placeholder-button"></div>
+                    <div class="placeholder-button"></div>
+                    <div class="placeholder-button"></div>
+                    <div class="placeholder-button"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-section">
+            <div class="container login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="login-icon"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                        <div>
+                            <h2>Student Login</h2>
+                            <p>Access your dashboard & applications</p>
+                        </div>
+                    </div>
+                    <form class="login-form">
+                        <div class="input-group">
+                            <label for="email" class="sr-only">Email Address</label>
+                            <div class="input-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <input type="email" id="email" placeholder="Email Address" required aria-label="Email Address">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <div class="input-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                <input type="password" id="password" placeholder="Password" required aria-label="Password">
+                                <button type="button" class="toggle-password" aria-label="Show password">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot password ?</a>
+                        </div>
+                        <button type="submit" class="login-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                            Login
+                        </button>
+                        <p class="signup-text">New here ? <a href="register.html" class="create-account-link">Create an account</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 TalyIntern. All right reserved.</p>
+            <p>Powered by internify</p>
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <button class="translate-btn" id="translate-btn">
+      <i class="fa-solid fa-globe"></i> Translate
+    </button>
+    <div id="google_translate_element" style="display:none; position:fixed; z-index:9999;"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      function positionTranslateWidget() {
+        var btn = document.getElementById('translate-btn');
+        var widget = document.getElementById('google_translate_element');
+        if (!btn || !widget) return;
+        var rect = btn.getBoundingClientRect();
+        widget.style.position = 'fixed';
+        widget.style.left = rect.left + 'px';
+        widget.style.top = (rect.bottom + 10) + 'px';
+        widget.style.zIndex = 9999;
+        widget.style.display = 'block';
+      }
+      document.getElementById('translate-btn').onclick = function(e) {
+        var el = document.getElementById('google_translate_element');
+        if (el.style.display === 'none' || el.style.display === '') {
+          positionTranslateWidget();
+        } else {
+          el.style.display = 'none';
+        }
+        e.stopPropagation();
+      }
+      window.addEventListener('resize', function() {
+        var el = document.getElementById('google_translate_element');
+        if (el.style.display === 'block') positionTranslateWidget();
+      });
+      window.addEventListener('scroll', function() {
+        var el = document.getElementById('google_translate_element');
+        if (el.style.display === 'block') positionTranslateWidget();
+      });
+      document.getElementById('translate-btn').addEventListener('mouseup', function() {
+        var el = document.getElementById('google_translate_element');
+        if (el.style.display === 'block') positionTranslateWidget();
+      });
+      document.getElementById('translate-btn').addEventListener('touchend', function() {
+        var el = document.getElementById('google_translate_element');
+        if (el.style.display === 'block') positionTranslateWidget();
+      });
+      document.addEventListener('click', function(e) {
+        var btn = document.getElementById('translate-btn');
+        var widget = document.getElementById('google_translate_element');
+        if (!btn || !widget) return;
+        if (widget.style.display === 'block') {
+          if (!btn.contains(e.target) && !widget.contains(e.target)) {
+            widget.style.display = 'none';
+          }
+        }
+      });
+      // Draggable button logic
+  const btn = document.getElementById('translate-btn');
+  btn.style.position = 'fixed';
+  const saved = localStorage.getItem('translateBtnPos');
+  if (saved) {
+    const pos = JSON.parse(saved);
+    btn.style.left = pos.left;
+    btn.style.top = pos.top;
+    btn.style.right = '';
+  }
+  let isDragging = false, offsetX = 0, offsetY = 0;
+  btn.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    offsetX = e.clientX - btn.getBoundingClientRect().left;
+    offsetY = e.clientY - btn.getBoundingClientRect().top;
+    btn.style.transition = 'none';
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      btn.style.left = (e.clientX - offsetX) + 'px';
+      btn.style.top = (e.clientY - offsetY) + 'px';
+      btn.style.right = '';
+      btn.style.position = 'fixed';
+    }
+  });
+  document.addEventListener('mouseup', function() {
+    if (isDragging) {
+      isDragging = false;
+      btn.style.transition = '';
+      localStorage.setItem('translateBtnPos', JSON.stringify({left: btn.style.left, top: btn.style.top}));
+    }
+  });
+  btn.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    const touch = e.touches[0];
+    offsetX = touch.clientX - btn.getBoundingClientRect().left;
+    offsetY = touch.clientY - btn.getBoundingClientRect().top;
+    btn.style.transition = 'none';
+    e.preventDefault();
+  });
+  document.addEventListener('touchmove', function(e) {
+    if (isDragging) {
+      const touch = e.touches[0];
+      btn.style.left = (touch.clientX - offsetX) + 'px';
+      btn.style.top = (touch.clientY - offsetY) + 'px';
+      btn.style.right = '';
+      btn.style.position = 'fixed';
+    }
+  });
+  document.addEventListener('touchend', function() {
+    if (isDragging) {
+      isDragging = false;
+      btn.style.transition = '';
+      localStorage.setItem('translateBtnPos', JSON.stringify({left: btn.style.left, top: btn.style.top}));
+    }
+  });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+// Hamburger menu toggle for mobile navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mainNav = document.querySelector('.main-nav');
+    hamburger.addEventListener('click', function() {
+        mainNav.classList.toggle('open');
+    });
+    // Optional: close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !mainNav.contains(e.target)) {
+            mainNav.classList.remove('open');
+        }
+    });
+});
+</script>
+</body>
+</html>
