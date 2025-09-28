@@ -50,6 +50,22 @@
       <label for="sidebar-password">Password</label>
       <div class="sidebar-password-wrap">
         <input type="password" id="sidebar-password" placeholder="Enter your password" autocomplete="current-password">
+      <div class="card">
+        <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
+        <h3>Amazon</h3>
+        <p>Fresher • Hybrid</p>
+        <p><i class="fa-solid fa-location-dot"></i> Mumbai</p>
+        <p><i class="fa-solid fa-sack-dollar"></i> ₹12K-18K /month</p>
+        <button class="details">Details →</button>
+      </div>
+      <div class="card">
+        <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
+        <h3>Infosys</h3>
+        <p>Experience • WFH</p>
+        <p><i class="fa-solid fa-location-dot"></i> Chennai</p>
+        <p><i class="fa-solid fa-sack-dollar"></i> ₹8K-12K /month</p>
+        <button class="details">Details →</button>
+      </div>
         <span id="toggle-password" class="toggle-password"><i class="fa fa-eye"></i></span>
       </div>
       <button type="submit" class="sidebar-login">Login</button>
@@ -114,42 +130,97 @@
     </select>
 
     <div class="card-container">
-      <div class="card">
+      <div class="card" data-company="Pinterest" data-type="Fresher • WFO" data-location="Delhi" data-salary="₹10K-15K /month" data-description="Pinterest is seeking creative interns to join our Delhi office. Work on real projects, collaborate with top engineers, and grow your career. Requirements: Basic coding, strong communication, team spirit;">
         <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
         <h3>Pinterest</h3>
         <p>Fresher • WFO</p>
         <p><i class="fa-solid fa-location-dot"></i> Delhi</p>
         <p><i class="fa-solid fa-sack-dollar"></i> ₹10K-15K /month</p>
-        <button class="details">Details →</button>
+        <button class="details" onclick="openCardModal(this.parentElement);event.stopPropagation();">Details →</button>
       </div>
-      <div class="card">
+      <div class="card" data-company="Huawei" data-type="Fresher • WFH" data-location="Bangalore" data-salary="₹5K-8K /month" data-description="Huawei offers remote internships for freshers. Join our Bangalore team and work on cutting-edge tech. Requirements: Basic programming, interest in telecom, self-motivation;">
         <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
         <h3>Huawei</h3>
         <p>Fresher • WFH</p>
         <p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
         <p><i class="fa-solid fa-sack-dollar"></i> ₹5K-8K /month</p>
-        <button class="details">Details →</button>
+        <button class="details" onclick="openCardModal(this.parentElement);event.stopPropagation();">Details →</button>
       </div>
-      <div class="card">
+      <div class="card" data-company="Discord" data-type="Experience • WFO" data-location="Noida" data-salary="₹2K-5K /month" data-description="Discord is hiring experienced interns for our Noida office. Work on community features, moderation tools, and more. Requirements: Prior experience, passion for online communities;">
         <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
         <h3>Discord</h3>
         <p>Experience • WFO</p>
         <p><i class="fa-solid fa-location-dot"></i> Noida</p>
         <p><i class="fa-solid fa-sack-dollar"></i> ₹2K-5K /month</p>
-        <button class="details">Details →</button>
+        <button class="details" onclick="openCardModal(this.parentElement);event.stopPropagation();">Details →</button>
       </div>
-      <div class="card">
+      <div class="card" data-company="Microsoft" data-type="Fresher • WFO" data-location="Hyderabad" data-salary="₹10K-15K /month" data-description="Microsoft Hyderabad is looking for fresh talent. Work on global products, learn from experts, and kickstart your career. Requirements: Coding basics, eagerness to learn, teamwork;">
         <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
         <h3>Microsoft</h3>
         <p>Fresher • WFO</p>
         <p><i class="fa-solid fa-location-dot"></i> Hyderabad</p>
         <p><i class="fa-solid fa-sack-dollar"></i> ₹10K-15K /month</p>
-        <button class="details">Details →</button>
+        <button class="details" onclick="openCardModal(this.parentElement);event.stopPropagation();">Details →</button>
+      </div>
+      <div class="card" data-company="Amazon" data-type="Fresher • Hybrid" data-location="Mumbai" data-salary="₹12K-18K /month" data-description="Amazon Mumbai is offering hybrid internships for freshers. Get hands-on experience in cloud computing and e-commerce. Requirements: Analytical skills, basic programming, willingness to learn;">
+        <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
+        <h3>Amazon</h3>
+        <p>Fresher • Hybrid</p>
+        <p><i class="fa-solid fa-location-dot"></i> Mumbai</p>
+        <p><i class="fa-solid fa-sack-dollar"></i> ₹12K-18K /month</p>
+        <button class="details" onclick="openCardModal(this.parentElement);event.stopPropagation();">Details →</button>
+      </div>
+      <div class="card" data-company="Infosys" data-type="Experience • WFH" data-location="Chennai" data-salary="₹8K-12K /month" data-description="Infosys is hiring experienced interns for remote work. Contribute to software development and digital transformation projects. Requirements: Prior internship, strong coding skills, remote collaboration;">
+        <span class="active"><i class="fa-solid fa-arrow-up"></i> Actively hiring</span>
+        <h3>Infosys</h3>
+        <p>Experience • WFH</p>
+        <p><i class="fa-solid fa-location-dot"></i> Chennai</p>
+        <p><i class="fa-solid fa-sack-dollar"></i> ₹8K-12K /month</p>
+        <button class="details" onclick="openCardModal(this.parentElement);event.stopPropagation();">Details →</button>
       </div>
     </div>
   </section>
 
   <!-- Google Translate Button -->
+<!-- Internship/Job Card Modal -->
+<div id="card-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(33,33,33,0.18);backdrop-filter:blur(2px);z-index:100000;justify-content:center;align-items:center;">
+  <div id="card-modal-content" style="background:#fff;border-radius:18px;box-shadow:0 8px 32px #2193b033;padding:32px 28px 24px 28px;min-width:320px;max-width:90vw;text-align:left;position:relative;animation:popIn 0.4s cubic-bezier(.68,-0.55,.27,1.55);">
+    <span id="card-modal-close" style="position:absolute;top:12px;right:18px;font-size:2rem;color:#2193b0;cursor:pointer;transition:color 0.2s;">&times;</span>
+    <h3 id="card-modal-title" style="margin-bottom:8px;color:#2193b0;font-size:1.5rem;"></h3>
+    <div id="card-modal-type" style="font-size:1.1rem;color:#333;margin-bottom:6px;"></div>
+    <div id="card-modal-location" style="font-size:1rem;color:#666;margin-bottom:6px;"></div>
+    <div id="card-modal-salary" style="font-size:1rem;color:#28a745;margin-bottom:10px;font-weight:600;"></div>
+    <div id="card-modal-description" style="font-size:1rem;color:#222;margin-bottom:14px;"></div>
+    <div style="margin-top:10px;">
+      <strong>Additional Info:</strong>
+      <ul style="margin-top:6px;margin-bottom:0;padding-left:18px;font-size:0.98rem;color:#444;">
+        <li>Verified by TalyIntern</li>
+        <li>Direct company contact</li>
+        <li>24/7 support available</li>
+        <li>AI-powered matching</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+function openCardModal(card) {
+  var modal = document.getElementById('card-modal');
+  document.getElementById('card-modal-title').textContent = card.getAttribute('data-company');
+  document.getElementById('card-modal-type').textContent = card.getAttribute('data-type');
+  document.getElementById('card-modal-location').textContent = 'Location: ' + card.getAttribute('data-location');
+  document.getElementById('card-modal-salary').textContent = 'Salary: ' + card.getAttribute('data-salary');
+  document.getElementById('card-modal-description').textContent = card.getAttribute('data-description');
+  modal.style.display = 'flex';
+}
+document.getElementById('card-modal-close').onclick = function() {
+  document.getElementById('card-modal').style.display = 'none';
+};
+document.getElementById('card-modal').onclick = function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+  }
+};
+</script>
 <button class="translate-btn" id="translate-btn">
   <i class="fa fa-globe"></i> Translate
 </button>
@@ -205,7 +276,7 @@
       }
     }
   });
-</script>
+</script> 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- Footer -->
