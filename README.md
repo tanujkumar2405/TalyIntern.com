@@ -65,5 +65,5 @@ The system is built keeping in mind:
 ## 👨‍💻 Team
 
 * Developed under **Smart India Hackathon 2025**
-* By Team [Your Team Name]
+* By Team Internify
 
