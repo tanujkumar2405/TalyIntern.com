@@ -75,12 +75,18 @@
   <label><input type="checkbox"> <strong>Work from home</strong></label>
       <input type="text" placeholder="e.g. Beginner">
       <input type="number" placeholder="e.g. 3000">
-      <button class="view-more">View more filter</button>
-
-      <div class="keyword-search">
-        <input type="text" placeholder="e.g. Design, Mumbai, Infosys">
-        <button><i class="fa fa-search"></i></button>
-      </div>
+        <button class="view-more" id="view-more-btn">View more filter <i class="fa fa-chevron-down"></i></button>
+        <div class="extra-filters" id="extra-filters">
+          <input type="text" placeholder="Company Name">
+          <input type="text" placeholder="Role Type">
+          <input type="text" placeholder="Duration (e.g. 2 months)">
+          <input type="number" placeholder="Max Stipend">
+          <label><input type="checkbox"> <strong>Actively Hiring</strong></label>
+        </div>
+        <div class="keyword-search">
+          <input type="text" placeholder="e.g. Design, Mumbai, Infosys">
+          <button><i class="fa fa-search"></i></button>
+        </div>
     </aside>
 
     <!-- Internship Cards -->
@@ -285,6 +291,22 @@
     });
     </script>
 <script>
+// View more filter toggle
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('view-more-btn');
+  var extra = document.getElementById('extra-filters');
+  if (btn && extra) {
+    btn.onclick = function() {
+      extra.classList.toggle('open');
+      btn.classList.toggle('open');
+      if (extra.classList.contains('open')) {
+        btn.innerHTML = 'View less filter <i class="fa fa-chevron-up"></i>';
+      } else {
+        btn.innerHTML = 'View more filter <i class="fa fa-chevron-down"></i>';
+      }
+    };
+  }
+});
 // True speedometer/odometer effect for each digit
 function animateSpeedometer(target, end, duration) {
   const digits = String(end).split('');
@@ -316,6 +338,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <style>
+/* Extra filters expand/collapse */
+.extra-filters {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.3s;
+  opacity: 0;
+  margin-bottom: 8px;
+}
+.extra-filters.open {
+  max-height: 400px;
+  opacity: 1;
+}
+.view-more {
+  background: linear-gradient(90deg, #2193b0 60%, #6dd5ed 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0 8px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #2193b033;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.view-more i {
+  transition: transform 0.3s;
+}
+.view-more.open i {
+  transform: rotate(180deg);
+}
 .odometer {
   font-size: 2.2rem;
   font-weight: bold;
