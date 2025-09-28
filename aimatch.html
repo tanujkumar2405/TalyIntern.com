@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Match - TalyIntern</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Google Translate Button -->
+  <button class="translate-btn" id="translate-btn">
+    <i class="fa fa-globe"></i> Translate
+  </button>
+  <div id="google_translate_element" style="display:none; position:fixed; bottom:80px; right:30px; z-index:9999;"></div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    function positionTranslateWidget() {
+      var btn = document.getElementById('translate-btn');
+      var widget = document.getElementById('google_translate_element');
+      if (btn && widget) {
+        var rect = btn.getBoundingClientRect();
+        widget.style.top = (rect.bottom + window.scrollY + 10) + 'px';
+        widget.style.left = (rect.left + window.scrollX) + 'px';
+      }
+    }
+    document.getElementById('translate-btn').onclick = function(e) {
+      var el = document.getElementById('google_translate_element');
+      if (el.style.display === 'none') {
+        el.style.display = 'block';
+        positionTranslateWidget();
+      } else {
+        el.style.display = 'none';
+      }
+    };
+    document.getElementById('translate-btn').addEventListener('mouseup', function() {
+      var el = document.getElementById('google_translate_element');
+      if (el.style.display === 'block') positionTranslateWidget();
+    });
+    document.getElementById('translate-btn').addEventListener('touchend', function() {
+      var el = document.getElementById('google_translate_element');
+      if (el.style.display === 'block') positionTranslateWidget();
+    });
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="TalyIntern Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="searh engine/index.html">Internship</a></li>
+        <li><a href="#" class="active">AI Match</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="#footer">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="ai-match-hero" style="padding:60px 0 40px 0;text-align:center;background:#eef6ff;">
+    <h1 style="font-size:2.5rem;color:#2193b0;font-weight:700;margin-bottom:18px;">AI Match</h1>
+    <p style="font-size:1.2rem;color:#333;max-width:600px;margin:0 auto 24px auto;">Let our AI recommend the best internships and jobs for you! Answer a few questions and get personalized matches based on your skills, interests, and goals.</p>
+    <i class="fa-solid fa-robot" style="font-size:3.5rem;color:#2193b0;margin-bottom:18px;"></i>
+    <div style="margin-top:32px;">
+  <a href="#" class="btn-primary" id="start-ai-match-btn" style="font-size:1.15rem;padding:14px 38px;border-radius:8px;">Start AI Match</a>
+    </div>
+  </section>
+
+  <section style="max-width:700px;margin:40px auto 0 auto;padding:0 18px;">
+    <h2 style="color:#2193b0;font-size:1.5rem;margin-bottom:12px;">How It Works</h2>
+    <ul style="font-size:1.08rem;color:#333;line-height:1.7;">
+      <li>Answer a few quick questions about your background and interests</li>
+      <li>Our AI analyzes your profile and preferences</li>
+      <li>Get a list of internships and jobs matched to you</li>
+      <li>Apply directly or save your matches for later</li>
+    </ul>
+  </section>
+
+  <footer id="footer" style="margin-top:60px;">
+<div id="ai-match-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(33,33,33,0.18);backdrop-filter:blur(2px);z-index:100000;justify-content:center;align-items:center;">
+  <div style="background:#fff;border-radius:18px;box-shadow:0 8px 32px #2193b033;padding:32px 28px 24px 28px;min-width:320px;max-width:90vw;text-align:center;position:relative;animation:popIn 0.4s cubic-bezier(.68,-0.55,.27,1.55);">
+    <span id="ai-match-modal-close" style="position:absolute;top:12px;right:18px;font-size:2rem;color:#2193b0;cursor:pointer;transition:color 0.2s;">&times;</span>
+    <h3 style="color:#2193b0;font-size:1.5rem;margin-bottom:12px;">AI Match Coming Soon!</h3>
+    <p style="font-size:1.1rem;color:#333;">This feature will let you answer questions and get personalized internship/job recommendations powered by AI.</p>
+    <p style="margin-top:18px;color:#2193b0;font-weight:600;">Stay tuned for updates!</p>
+  </div>
+</div>
+    <div class="footer-content">
+      <div>
+        <h3>TalyIntern</h3>
+        <p>AI-Powered Internship<br>Recommendation for Your future Internship</p>
+        <p>An initiative under PM Internship Scheme</p>
+        <p>Made in INDIA with love</p>
+      </div>
+      <div>
+        <h4>For Student</h4>
+        <ul>
+          <li>AI Match</li>
+          <li>Apply Internship</li>
+          <li>Find Jobs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+      <div class="socials">
+        <h4>Follow Us</h4>
+        <p> <i class="fa-brands fa-instagram"></i> IG | <i class="fa-brands fa-linkedin"></i> LinkedIn |<i class="fa-solid fa-envelope"></i> Mail | <i class="fa-brands fa-youtube"></i> YouTube</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TalyIntern. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+  </footer>
+</body>
+<script>
+document.getElementById('start-ai-match-btn').onclick = function(e) {
+  e.preventDefault();
+  document.getElementById('ai-match-modal').style.display = 'flex';
+};
+document.getElementById('ai-match-modal-close').onclick = function() {
+  document.getElementById('ai-match-modal').style.display = 'none';
+};
+document.getElementById('ai-match-modal').onclick = function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+  }
+};
+</script>
+</html>

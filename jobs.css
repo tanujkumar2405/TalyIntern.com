@@ -1,0 +1,183 @@
+/* jobs.css - Jobs Page Styling for TalyIntern */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f8fa;
+    margin: 0;
+    color: #222;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding-bottom: 8px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 64px;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2a4d8f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2a4d8f;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    background: #e3eafc;
+    color: #1a3570;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 32px 0 24px 0;
+    color: #2a4d8f;
+    text-align: center;
+}
+
+.jobs-container {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding: 0 32px 32px 32px;
+    scroll-snap-type: x mandatory;
+}
+
+.job-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(42,77,143,0.08);
+    min-width: 280px;
+    max-width: 320px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    transition: box-shadow 0.2s;
+}
+
+.job-card:hover {
+    box-shadow: 0 8px 24px rgba(42,77,143,0.16);
+}
+
+.card-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background: #e3eafc;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #1a3570;
+}
+
+.card-company {
+    font-size: 1rem;
+    color: #2a4d8f;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.card-location {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.card-btn {
+    background: #2a4d8f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.card-btn:hover {
+    background: #1a3570;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(42,77,143,0.12);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 32px 24px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(42,77,143,0.18);
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    color: #2a4d8f;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #1a3570;
+}
