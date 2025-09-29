@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Profile | TalyIntern</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="TalyIntern Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="searh engine/index.html">Internship</a></li>
+                <li><a href="aimatch.html">AI Match</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-section">
+            <!-- Banner removed for cleaner profile page -->
+      <div style="margin-top: 700px;"></div>
+      <div style="display: flex; justify-content: center;">
+        <div class="profile-card refined premium floating-card">
+                <div class="profile-avatar">
+                    <div class="avatar-border-animate">
+                        <img src="login.png" alt="Candidate Avatar" title="Demo Student">
+                    </div>
+                    <span class="profile-badge" title="Verified"><i class="fa-solid fa-certificate"></i></span>
+                </div>
+                <div class="profile-info">
+                    <h2>Demo Student <span class="profile-status animated-status" title="Currently Online">● Online</span></h2>
+                    <div class="profile-social">
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" title="Email" id="copy-email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-row" title="Course & Year"><i class="fa-solid fa-graduation-cap"></i> <span>B.Tech Computer Science, 3rd Year</span></div>
+                        <div class="profile-row" title="Location"><i class="fa-solid fa-location-dot"></i> <span>Delhi, India</span></div>
+                    </div>
+                    <div class="profile-skills">
+                        <strong>Skills:</strong>
+                        <span class="skill-badge" title="Python">Python</span>
+                        <span class="skill-badge" title="JavaScript">JavaScript</span>
+                        <span class="skill-badge" title="Data Analysis">Data Analysis</span>
+                        <span class="skill-badge" title="Machine Learning">Machine Learning</span>
+                    </div>
+                    <div class="profile-preferences">
+                        <strong>Internship Preference:</strong>
+                        <span class="preference-badge" title="AI/ML">AI/ML</span>
+                        <span class="preference-badge" title="Web Development">Web Development</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="profile-btn" id="download-resume" title="Download Resume"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</button>
+                        <button class="profile-btn" id="edit-profile" title="Edit Profile"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Edit Profile Modal -->
+            <div id="edit-modal" class="modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(33,33,33,0.18);backdrop-filter:blur(2px);z-index:100000;justify-content:center;align-items:center;">
+              <div class="modal-content" style="background:#fff;border-radius:18px;box-shadow:0 8px 32px #2193b033;padding:32px 28px 24px 28px;min-width:320px;max-width:90vw;text-align:left;position:relative;">
+                <span id="close-modal" style="position:absolute;top:12px;right:18px;font-size:2rem;color:#2193b0;cursor:pointer;transition:color 0.2s;">&times;</span>
+                <h3 style="margin-bottom:8px;color:#2193b0;font-size:1.5rem;">Edit Profile (Demo)</h3>
+                <form id="edit-form">
+                  <label>Name</label>
+                  <input type="text" value="Demo Student" style="width:100%;margin-bottom:10px;">
+                  <label>Email</label>
+                  <input type="email" value="demo@student.com" style="width:100%;margin-bottom:10px;">
+                  <label>Course</label>
+                  <input type="text" value="B.Tech Computer Science" style="width:100%;margin-bottom:10px;">
+                  <label>Year</label>
+                  <input type="text" value="3rd Year" style="width:100%;margin-bottom:10px;">
+                  <button type="submit" style="background:#2a4d8f;color:#fff;padding:8px 18px;border-radius:8px;border:none;font-weight:600;">Save (Demo)</button>
+                </form>
+              </div>
+            </div>
+        </section>
+        <script>
+        // Animated online status
+        setInterval(function(){
+          var status = document.querySelector('.animated-status');
+          if(status) status.classList.toggle('blink');
+        }, 700);
+
+        // Edit Profile Modal
+        document.getElementById('edit-profile').onclick = function() {
+          document.getElementById('edit-modal').style.display = 'flex';
+        };
+        document.getElementById('close-modal').onclick = function() {
+          document.getElementById('edit-modal').style.display = 'none';
+        };
+        document.getElementById('edit-form').onsubmit = function(e) {
+          e.preventDefault();
+          alert('Demo only: Profile changes are not saved.');
+          document.getElementById('edit-modal').style.display = 'none';
+        };
+
+        // Resume Download Simulation
+        document.getElementById('download-resume').onclick = function() {
+          alert('Demo only: Resume download simulated.');
+        };
+
+        // Copy Email to Clipboard
+        document.getElementById('copy-email').onclick = function() {
+          navigator.clipboard.writeText('demo@student.com');
+          alert('Email copied to clipboard!');
+        };
+        </script>
+        <script>
+        // Animated online status
+        setInterval(function(){
+          var status = document.querySelector('.animated-status');
+          if(status) status.classList.toggle('blink');
+        }, 700);
+        </script>
+        <script>
+        // Animated online status
+        setInterval(function(){
+          var status = document.querySelector('.animated-status');
+          if(status) status.classList.toggle('blink');
+        }, 700);
+        </script>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <div>
+                <h3>TalyIntern</h3>
+                <p>AI-Powered Internship<br>Recommendation for Your future Internship</p>
+                <p>An initiative under PM Internship Scheme</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
