@@ -63,6 +63,20 @@
           <a href="#" title="GitHub" class="social-btn github"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
+      <script>
+        document.querySelector('.sidebar-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = document.getElementById('sidebar-email').value.trim();
+          var password = document.getElementById('sidebar-password').value.trim();
+          if(email === 'demo@student.com' && password === 'abc@123') {
+            window.location.href = 'profile.html';
+          } else {
+            var error = document.getElementById('sidebar-error');
+            error.textContent = 'Invalid credentials. Try demo@student.com / abc@123 for demo profile.';
+            error.style.display = 'block';
+          }
+        });
+      </script>
     </form>
   </div>
   </header>
