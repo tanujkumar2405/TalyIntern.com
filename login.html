@@ -89,23 +89,35 @@
                         </div>
                     </div>
                     <form class="login-form">
-                        <div class="input-group">
-                            <label for="email" class="sr-only">Email Address</label>
-                            <div class="input-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                <input type="email" id="email" placeholder="Email Address" required aria-label="Email Address">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <label for="password" class="sr-only">Password</label>
-                            <div class="input-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                                <input type="password" id="password" placeholder="Password" required aria-label="Password">
-                                <button type="button" class="toggle-password" aria-label="Show password">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                                </button>
-                            </div>
-                        </div>
+            <div class="input-group">
+              <label for="email" class="sr-only">Email Address</label>
+              <div class="input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <input type="email" id="email" placeholder="Email Address" required aria-label="Email Address">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="password" class="sr-only">Password</label>
+              <div class="input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <input type="password" id="password" placeholder="Password" required aria-label="Password">
+                <button type="button" class="toggle-password" aria-label="Show password">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+            </div>
+            <script>
+            document.querySelector('.login-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              var email = document.getElementById('email').value.trim();
+              var password = document.getElementById('password').value.trim();
+              if(email === 'demo@student.com' && password === 'abc@123') {
+              window.location.href = 'profile.html';
+              } else {
+              alert('Invalid credentials. Try demo@student.com / abc@123 for demo profile.');
+              }
+            });
+            </script>
                         <div class="form-options">
                             <label class="checkbox-container">
                                 <input type="checkbox" id="remember-me">
